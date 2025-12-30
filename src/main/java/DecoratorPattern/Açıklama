@@ -1,0 +1,28 @@
+Neden Önemli ?
+ - Miras patlamasını önler (çok sayıda alt sınıf)
+ - “Çalışırken özellik ekleme/çıkarma” imkânı
+ - SOLID (Open/Closed) ile uyumlu
+
+ Problem Senaryosu: Kahve Örneği
+ Coffee
+ Şekerli kahve, sütlü kahve, süt+şeker+krema vs.
+ Her kombinasyon için ayrı sınıf → sınıf patlaması
+
+ Çözüm? Davranışı sarmalamak.
+
+ Bir nesnenin sorumluluklarını dinamik olarak
+ genişletir.
+ Alt sınıf oluşturmaya esnek bir alternatif sunar.
+ Ana fikir: “Kompozisyon + delegasyon”.
+
+ Decorator’ın Temel Fikri:
+  Ortak bir arayüz: Component
+  Gerçek nesne: ConcreteComponent
+  Saran nesne: Decorator (aynı arayüzü uygular)
+  Ek özellik: ConcreteDecorator
+
+  Decorator’ın Temel Fikri
+    Ortak bir arayüz: Component
+    Gerçek nesne: ConcreteComponent
+    Saran nesne: Decorator (aynı arayüzü uygular)
+    Ek özellik: ConcreteDecorator

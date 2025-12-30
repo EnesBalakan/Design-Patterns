@@ -1,0 +1,52 @@
+Gerçek hayatta çok gördüğümüz yapı: ağaçlar
+Örnekler:
+Dosya sistemi: klasörler & dosyalar
+Organizasyon şeması: müdür & çalışanlar
+Menü & alt menüler
+
+Soru: Farklı tipte nesneleri tek tipmiş gibi kullanabilir
+miyiz?
+
+Hem tekil nesneler hem de koleksiyonlar var
+İstemci kodu:
+“Bu yaprak mı, bu grup mu?” diye sormak zorunda kalıyor
+
+Tür kontrolü (instanceof, if-else) ile doluyor
+
+Çözüm: Ortak bir arayüz ile hepsine aynı gözle
+bakmak
+
+GoF:
+
+“Nesneleri ağaç yapılar halinde birleştirerek
+bütün-parça hiyerarşisi oluşturur.İstemcilere tekil
+nesne ile bileşimi aynı şekilde kullanma olanağı verir.”
+
+Amaç:
+
+Birleştirilebilir nesneler
+Tek tip arayüz
+
+Component (interface / abstract)
+-operation()
+Leaf implements Component
+Composite implements Component
+-List<Component> children
+-add(Component)
+-remove(Component)
+-operation() içinde çocuklara çağrı
+
+Şirket organizasyon şeması
+
+Employee (Component)
+Developer (Leaf)
+Manager (Composite: altındaki çalışanları tutar)
+Üniversite yapısı
+ Fakülte → Bölüm → Program → Ders
+
+Dezavantajlar / Dikkat
+ Tasarım daha genel olur:
+ Bazı Composite operasyonları Leaf için anlamsız olabilir
+ Yanlış kullanımda:
+ Çok esnek → kuralsız kullanım
+ Sorumluluklar bulanıklaşabilir
