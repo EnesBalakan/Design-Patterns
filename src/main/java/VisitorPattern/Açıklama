@@ -1,0 +1,18 @@
+1. Somut Sorun: "Yeni Özellik Eklerken Kodun Kirlenmesi"
+Bir e-ticaret siten olduğunu ve sepetinde farklı türde ürünler bulunduğunu hayal et:
+
+Kitap (Sabit vergi oranı, kırılmaz).
+Meyve (Vergisiz, kilo ile satılır, çürüyebilir).
+Elektronik (Yüksek vergi, garanti belgesi gerekir).
+
+İlk İhtiyaç: Bu ürünlerin KDV (Vergi) tutarını hesaplaman gerekiyor.
+Geleneksel (Kötü) Yöntem: Gidip Kitap, Meyve ve Elektronik sınıflarının içine tek tek kdvHesapla() metodu yazarsın.
+İkinci İhtiyaç: Bir ay sonra patronun geldi ve "Bu ürünlerin kargo maliyetini hesaplayan bir özellik ekleyelim" dedi.
+Sorun: Tekrar Kitap, Meyve, Elektronik sınıflarını açıp hepsine bu sefer kargoHesapla() metodu eklemen gerekecek.
+Büyük Sorun: Sürekli sınıf dosyalarını değiştiriyorsun. Ürün sınıfların (Data) aslında sadece veriyi tutmalıydı ama şimdi vergi mantığı, kargo mantığı, raporlama mantığı derken kod çöplüğe döndü. Bu durum Single Responsibility (Tek Sorumluluk) prensibine aykırıdır.
+
+2. Çözüm: Visitor Deseni
+Visitor deseni der ki: "Veri yapıların (Ürünler) ile o veriler üzerinde çalışan algoritmaları (Vergi, Kargo) birbirinden ayır."
+Algoritmaları (Ziyaretçileri) dışarıda tutacağız. Ürünler sadece "Kapım açık, içeri girebilirsin" diyecek.
+
+Meganda sanroff özleliği  olmaıdığı için sadece hyundaiye izin verdik sanrofoo
