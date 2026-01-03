@@ -1,0 +1,5 @@
+Algritmaların değiştirilebilmesi
+çneğin ödeme sistemimiz olsun
+farklı ödeme yolları vardır : credi kartı , paypal , qr kod
+bunla gerektiğinde yer değiştirebilmeli ancak if elslerle yaparsak karmaşık olur
+bu yüzden Strategy pattern kullanırız
