@@ -1,0 +1,28 @@
+Amaç: Bir sınıfın soyutlanması (abstraction) ile
+uygulama detaylarını (implementation) birbirinden
+ayırmak
+
+Böylece: İkisi de bağımsız olarak geliştirilebilir ve
+genişletilebilir
+
+Ana fikir:“Soyutlama → başka bir nesneyi kullanarak
+çalışsın”
+
+Motivasyon: Neden Bridge?
+
+Hem soyutlama türleri artıyor
+
+Hem de platform / implementasyon türleri artıyor
+
+Örnek:
+Farklı şekiller: Circle, Rectangle, Triangle
+Farklı çizim API’leri: OpenGL, DirectX, SVG
+Tüm kombinasyonları sınıf olarak yazarsak?
+OpenGLCircle, DirectXCircle, OpenGLRectangle, …
+
+Şekil (soyutlama) ile renk (implementasyon) ayrı
+hiyerarşiler olsun
+Şekil nesnesi, içeride bir Renk arayüzü (Implementor)
+kullansın
+Yeni şekil eklendiğinde renk hiyerarşisi aynı kalır
+Yeni renk eklendiğinde şekil hiyerarşisi aynı kalır
